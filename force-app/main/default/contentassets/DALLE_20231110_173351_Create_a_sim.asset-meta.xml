@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>DALLE_20231110_173351_Create_a_sim</masterLabel>
+    <relationships>
+        <organization>
+            <access>VIEWER</access>
+        </organization>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>DALL·E 2023-11-10 17.33.51 - Create a simple and clean logo design that reflects the concept of a Salesforce workflow. The logo should include stylized elements from a Salesforce .png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

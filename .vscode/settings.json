@@ -1,0 +1,23 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "material-icon-theme.folders.color": "#4287f5",
+  "material-icon-theme.files.associations": {
+  },
+  "material-icon-theme.folders.associations": {
+    ".sf": "Other",
+    ".husky": "Other",
+    ".sfdx": "Other",
+    "force-app": "Src",
+    "main": "Src",
+    "default": "Src",
+    "classes": "",
+    "layouts": "",
+    "triggers": ""
+  },
+  "material-icon-theme.languages.associations": {},
+  "material-icon-theme.activeIconPack": "angular"
+}

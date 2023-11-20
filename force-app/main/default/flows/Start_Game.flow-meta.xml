@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Start Game {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Start Game</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Ready_To_Play</name>
+        <label>Update Ready To Play</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Ready_to_Play__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Game__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Start_Game</name>
+        <label>Start Game</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Update_Ready_To_Play</targetReference>
+        </connector>
+        <fields>
+            <name>InstructionsText</name>
+            <fieldText>&lt;p&gt;{!Instructions}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Start Game</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Start_Game</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Instructions</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&quot;&lt;strong&gt;Rock, Paper, Scissors&lt;/strong&gt;&quot; is a simple hand game that is commonly played by two people. Here are the basic rules and instructions for playing:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;strong style=&quot;color: var(--tw-prose-bold);&quot;&gt;Objective&lt;/strong&gt;: The main objective of the game is to outsmart your opponent by choosing a hand sign that defeats their choice.&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;color: var(--tw-prose-bold);&quot;&gt;Determining the Winner&lt;/strong&gt;:&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;Rock crushes Scissors (Rock wins)&lt;ul&gt;&lt;li&gt;Scissors cuts Paper (Scissors win)&lt;/li&gt;&lt;li&gt;Paper covers Rock (Paper wins)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;&lt;strong style=&quot;color: var(--tw-prose-bold);&quot;&gt;Tie&lt;/strong&gt;: If both players choose the same sign, it&apos;s a tie, and you typically play again to break the tie.&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;color: var(--tw-prose-bold);&quot;&gt;Gameplay Variations&lt;/strong&gt;:&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;color: var(--tw-prose-bold);&quot;&gt;Best of Three&lt;/span&gt;: Often, the game is played in rounds, and whoever wins the most out of three rounds is the overall winner.&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
